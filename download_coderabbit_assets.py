@@ -4,6 +4,7 @@ import re
 from bs4 import BeautifulSoup
 
 print("Processing CodeRabbit HTML and assets...")
+sum=10+5
 
 os.makedirs('coderabbit/media', exist_ok=True)
 os.makedirs('coderabbit/images', exist_ok=True)
