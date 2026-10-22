@@ -1,0 +1,197 @@
+CodeAnt AI | The Exploit-Based Agentic Security Platform
+Autonomous Preventive
+Security Platform
+Autonomous Preventive
+Security Platform
+Autonomous Preventive
+Security Platform
+A self-learning threat model that continuously attacks and defends, to ensure no company ever leaks critical data.
+START PENTEST
+NO CC REQUIRED
+BOOK A DEMO
+Trusted by Startups to Fortune 100
+[CUSTOMER STORIES]
+Teams trust CodeAnt
+to prevent breaches
+"CodeAnt went deeper than any penetration test we've ever commissioned. The
+most thorough offensive security platform
+we've used."
+Jeson Patel
+CTO, 11x (Series B, $75M+ Raised)
+"CodeAnt went deeper than any penetration test we've ever commissioned. The
+most thorough offensive security platform
+we've used."
+Jeson Patel
+CTO, 11x (Series B, $75M+ Raised)
+[THE FULL SECURITY LIFECYCLE]
+[THE FULL SECURITY LIFECYCLE]
+One security graph.
+Code to attack surface.
+CONTEXT
+THREAT MODEL
+ATTACK
+PROOF
+Source, IaC, dependencies, secrets, endpoints, cloud config, commit history read the way an attacker would, resolved into one context graph.
+The graph shows where the application breaks: auth boundaries, trust assumptions, data flows, paths from untrusted input to something worth reaching. Ranked before anything runs.
+500+ agents run those paths against the running application, chaining recon, injection, access control, and business logic the way a real attacker does.
+Nothing reaches you unless it was exploited — with the request, the response that proved it, and steps to reproduce. Review, not investigation.
+[ATTACK SURFACE GRAPH]
+See how your attack surface
+connects to real risk.
+[OFFENSIVE]
+Continous Attack.
+Continous Defense.
+Blackbox Pentesting
+Starts with just your domain, maps what's exposed, chains real exploits.
+Whitebox Pentesting
+Reads your source and Git history to find what outside-in tests miss.
+Graybox Pentesting
+Logs in as a real user, attacks like one who's read your code.
+Blackbox Pentesting
+Starts with just your domain and chains real exploits.
+Whitebox Pentesting
+Graybox Pentesting
+[DEFENSIVE]
+Find risks across
+Cloud, Code, and Runtime.
+DAST
+Dynamic testing of your running app and APIs even behind login.
+Cloud Threat Actors
+Attacks your cloud like a real threat actor from misconfig to breach.
+Cloud Security (CSPM)
+Cloud misconfigurations and risk, mapped to real attack paths.
+DAST
+Dynamic testing of your running app and APIs even behind login.
+Cloud Threat Actors
+Cloud Security (CSPM)
+[INTEGRATIONS]
+Integrates with
+your entire stack
+[SECURE & COMPLIANT]
+Security first design
+built for enterprises
+Security first design
+built for enterprises
+Security first design
+built for enterprises
+Trust Center
+BOOK A DEMO
+AICPA
+SOC2
+TYPE 2
+AICPA
+SOC2
+TYPE 2
+SOC 2 Type II
+COOL
+VENDOR
+2026
+COOL
+VENDOR
+2026
+Gartner Cool Vendor 2026
+HIPAA Compliant
+[GET STARTED]
+Find the breach path
+before attackers do.
+Find the breach path
+before attackers do.
+START PENTEST
+NO CC REQUIRED
+BOOK A DEMO
+CodeAnt AI
+355 Bryant St, San Francisco, CA 94107
+Product
+Blackbox Pentesting
+Whitebox Pentesting
+Graybox Pentesting
+Code Security
+Company
+About
+Pricing
+Customer Story
+Blogs
+Glossary
+Enterprise
+Contact Sales
+Developers
+Documentation
+Integrations
+Security Research
+Vulnerability Data
+System Status
+Legal
+DPA
+Terms and Conditions
+Privacy Policy
+Trust Center
+EU AI Act Policy
+Report a Vulnerability
+Copyright © 2026 CodeAnt AI. All rights reserved.
+Product
+Blackbox Pentesting
+Whitebox Pentesting
+Graybox Pentesting
+Code Security
+Company
+About
+Pricing
+Customer Story
+Blogs
+Glossary
+Enterprise
+Contact Sales
+Developers
+Documentation
+Integrations
+Security Research
+Vulnerability Data
+System Status
+Legal
+DPA
+Terms and Conditions
+Privacy Policy
+Trust Center
+EU AI Act Policy
+Report a Vulnerability
+Copyright © 2026 CodeAnt AI. All rights reserved.
+CodeAnt AI
+355 Bryant St, San Francisco, CA 94107
+Product
+Blackbox Pentesting
+Whitebox Pentesting
+Graybox Pentesting
+Code Security
+Company
+About
+Pricing
+Customer Story
+Blogs
+Glossary
+Enterprise
+Contact Sales
+Developers
+Documentation
+Integrations
+Security Research
+Vulnerability Data
+System Status
+Legal
+DPA
+Terms and Conditions
+Privacy Policy
+Trust Center
+EU AI Act Policy
+Report a Vulnerability
+Copyright © 2026 CodeAnt AI. All rights reserved.
+CodeAnt AI
+Product
+Resources
+Security Reseach
+Customer
+Enterprise
+Pricing
+BOOK A DEMO
+LOGIN
+LOGIN
+CodeAnt AI

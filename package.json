@@ -1,0 +1,20 @@
+{
+  "name": "codeant-ai-replica",
+  "version": "1.0.0",
+  "description": "Reverse engineered pixel-perfect replica of CodeAnt AI (https://codeant.ai/)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "codeant",
+    "replica",
+    "dark-mode",
+    "landing-page",
+    "framer",
+    "reverse-engineering"
+  ],
+  "author": "",
+  "license": "ISC"
+}

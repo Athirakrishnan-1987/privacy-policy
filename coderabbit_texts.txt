@@ -1,0 +1,484 @@
+CodeRabbit | Governance & Control for Agentic Development
+Skip to content
+Product
+Customers
+Pricing
+Resources
+Contact Us
+Log In
+Get a free trial
+Agentic change management
+The future isn't writing code.
+It's
+reviewing it.
+AI-driven code now outpaces human capacity.
+We help teams ship code, not surprises.
+Try it for free
+01
+Review
+every PR automatically
+coderabbitai
+bot
+commented 2 minutes ago
+Review Change Stack
+Potential issue
+Major
+Reject expired refresh tokens before issuing a session.
+Check the token expiry before creating a new authenticated session.
+@@ -42,2 +42,3 @@ export async function createSession
+− return issueSession(payload.userId);
++ if (payload.expiresAt <= Date.now()) return null;
++ return issueSession(payload.userId);
+Committable suggestion
+Guard against expired refresh tokens before issuing the session:
+if (payload.expiresAt <= Date.now()) return null;
+coderabbitai
+bot
+commented just now
+02
+Prioritize
+Now
+Within each person's daily capacity
+14
+P0
+Skip bot-authored comment review tasks
+Review this early because it can resolve assumptions that may affect nearby PRs and reduce rework.
+Low security risk
+Maintenance
+Deep review
+lop
+21102
+@ezrapike[bot]
+P1
+feat(agents): extend per-run prompt_cache_key to cbe/customcheck/mcp-research
+Review this early because it can resolve assumptions that may affect nearby PRs and reduce rework.
+Low security risk
+Feature
+Deep review
+rex
+21194
+@arlopike
+Next
+All remaining reviews
+66
+P1
+fix(dashboard): scope PR details authors by org
+Keep this visible for async review because it is useful work without an immediate interruption signal.
+Low security risk
+Bug fix
+Standard review
+havana
+21189
+@ezrapike[bot]
+P2
+[codex] Lean path instruction metrics insert
+Hold this behind refresh work because draft, conflict, or drift signals would make reviewer attention premature.
+Needs author action
+Low security risk
+Draft
+silver
+21153
+@miravale
+03
+Understand
+04
+Secure
+Real-time codebase health
+Mostly healthy
+Scanning every PR
+Last scan now
+0 critical
+Dependency vulnerability
+High
+axios · GHSA-4w2v-q235-vp99
+Detected on PR #482
+Fix ready
+Severity distribution
+AI Deep Scan and Dependencies
+1,999
+findings
+Critical
+2%
+High
+12%
+Unscanned
+40%
+Healthy
+46%
+Read the
+Swiggy
+case study in a new tab
+Read the
+Visma
+case study in a new tab
+Read the
+Swiggy
+case study in a new tab
+Read the
+Visma
+case study in a new tab
+Read the
+Trivago
+case study in a new tab
+Read the
+Clerk
+case study in a new tab
+Read the
+Task Rabbit
+case study in a new tab
+Trusted by
+17K
+customers
+6M
+Repositories
+Most installed AI App on
+GitHub
+GitLab
+We're using CodeRabbit all over NVIDIA
+Jensen Huang
+Founder & CEO
+Watch the NVIDIA customer story in a new tab
+Fast code.
+Faster chaos.
+Coding agents are flooding pipelines with massive PRs faster than teams can validate, prioritize, understand, or secure them.
+01 Review
+Industry-leading AI code reviews.
+We pioneered AI code reviews and have best-in-class context. Our automated reviews are the central validation layer for AI code.
+acme/platform
+#482
+coderabbitai
+bot
+reviewed 2m ago
+Invalidate the cache after the mutation.
+The record updates, but the stale project key remains in Redis.
+- await db.project.update(input)
++ await updateProjectAndInvalidate(input)
+codex
+coding agent
+replied 1m ago
+Fixed in
+9f2c4a1
+— invalidation now runs after the transaction, with a regression test for the stale-cache path.
+coderabbitai
+bot
+checked now
+Verified. The cache is cleared after commit and the new test covers the failure mode.
+coderabbitai
+bot
+reviewed 3m ago
+Return the HTTP error from the service layer.
+This keeps the handler smaller and centralizes error mapping.
+SK
+shaun-k
+author
+replied 2m ago
+@coderabbitai
+In this repository, handlers own the HTTP mapping. Services return domain errors.
+coderabbitai
+bot
+replied now
+Understood — I'll follow that convention in future reviews.
+New Learnings Added
+User: shaun-k
+PR: acme/platform#482
+File: app/api/projects/route.ts:42–58
+Learning: Handlers map domain errors to HTTP responses.
+coderabbitai
+bot
+updated just now
+Pre-merge checks | ✅ 3
+✅ Passed checks (3 passed)
+Check name
+Status
+Explanation
+Description Check
+Passed
+The PR description follows the repository template.
+Title Check
+Passed
+The title clearly describes the payment-limit change.
+Docstring Coverage
+Passed
+No changed functions require docstrings.
+🚀 Post-Merge Actions
+Update changelog
+Notify release channel
+Sync docs
+coderabbitai
+bot
+commented just now
+🚀 Post-Merge Actions
+@shaun-k, one or more post-merge actions failed.
+Update changelog
+— opened follow-up PR
+#483
+Notify release channel
+— Slack connection unavailable.
+coderabbitai
+bot
+reviewed 2m ago
+Invalidate the cache after the mutation.
+The record updates, but the stale project key remains in Redis.
+- await db.project.update(input)
++ await updateProjectAndInvalidate(input)
+codex
+coding agent
+replied 1m ago
+Fixed in
+9f2c4a1
+— invalidation now runs after the transaction, with a regression test for the stale-cache path.
+coderabbitai
+bot
+checked now
+Verified. The cache is cleared after commit and the new test covers the failure mode.
+Dozens more points of context
+We bring in more context than any other tool for reviews that actually understand your codebase.
+Agent loops with reviews
+Loops with your coding agents to address all the review feedback.
+Continuous learning
+Auto learns from your usage and adapts to your team's preferences.
+Pre-Merge Checks & Post-Merge Actions
+Enforce standards before merge. Complete follow-up work after.
+Customizable
+Customize everything from your coding guidelines to your workflow and review style with Quiet, Chill, and Assertive profiles.
+See a sample review
+02 Triage
+Prioritize your PR flood.
+With more PRs than ever ballooning your queue, CodeRabbit Triage scores, ranks, and routes them to ship value faster.
+Prioritize value
+Ship changes with high business impact first.
+Rank risk
+Fast-track safe, routine PRs and review high-risks ones carefully.
+Choose the right reviewer
+Auto-assign the right reviewer with the PR for a faster review.
+Understand your queue
+A Kanban board for PRs that helps you understand your queue at a glance.
+Learn more
+03 Change Stack
+Code explainability for massive diffs.
+Git platforms make massive diffs confusing. Change Stack helps you understand a thousand-line diff in minutes.
+PR interface for agentic code
+Created with teams deploying long-running agents in mind.
+Approve with context, not guesswork
+Understand what it means, not just what changed.
+Close the explainability gap
+Visualize the impact across layers with:
+Semantic diffs
+Blast radius context
+Architectural diagrams
+04 Security
+Agentic code security monitoring.
+Ditch outdated pattern matching tools and get continuous monitoring from CodeRabbit Security.
+SM
+Security
+Overview
+Scan repository
+Overview
+Repository posture
+High / critical · Medium · Verified
+web-app
+28/30
+api
+42/42
+auth
+12/14
+workers
+9/9
+Security Trend
+Scan findings by severity over time
++  Repository
++  Finding type
+AI Deep Scan
+Dependency vulnerabilities
+30d
+90d
+180d
+2000
+1500
+1000
+500
+Jul 9
+Jul 11
+Jul 13
+Jul 15
+Jul 17
+Jul 19
+Jul 21
+Jul 23
+Jul 25
+Jul 27
+Jul 29
+Jul 31
+Aug 2
+Aug 4
+Aug 7
+Severity Distribution
+AI Deep Scan and Dependencies: 47 critical, 806 high, 911 medium, and 235 low findings.
+Severity Distribution
+AI Deep Scan and Dependencies
+1,999
+findings
+Critical
+47
+2%
+High
+806
+40%
+Medium
+911
+46%
+Low
+235
+12%
+AI threats need AI tools
+With LLMs, time to exploit is <1 day for disclosed vulnerabilities.
+Beyond patterns
+Reasons across your codebase to find what rules can’t.
+Continuous monitoring
+Monitor with:
+Scheduled deep scans
+Scans on every PR
+Verify & repair
+Verifies findings to reduce false positives and then fixes it in a PR.
+Learn more
+Shared intelligence
+Best-in-class context.
+Across each step, we pull in dozens more points of context than other tools.
+Codegraph
+Builds a deterministic map of every possible node affected by the change.
+Adaptive systems
+Gathers related history, docs, and context for how your team works in the codebase.
+Business context
+Brings in context from PRDs, issues, and internal docs relevant to the work.
+Review generation
+Uses agentic code generation and exploration, static verification, and analysis to deliver a review.
+Ensemble of models & tools
+Brings together multiple models to solve difficult problems, playing to their relative strengths.
+Codegraph
+Builds a deterministic map of every possible node affected by the change.
+Adaptive systems
+Gathers related history, docs, and context for how your team works in the codebase.
+Business context
+Brings in context from PRDs, issues, and internal docs relevant to the work.
+Review generation
+Uses agentic code generation and exploration, static verification, and analysis to deliver a review.
+Ensemble of models & tools
+Brings together multiple models to solve difficult problems, playing to their relative strengths.
+More ways to tame the chaos.
+CodeRabbit for Slack
+The same codebase intelligence that powers every review powers an agent that helps teams with things like planning, incident response, and triage.
+Triage
+Your error monitoring, deployment alerts, and incident feeds all post to Slack. CodeRabbit Agent monitors and triages incidents, investigates, and suggests a fix.
+CodeRabbit
+App
+Thread in #
+checkout-alerts
+Incident update — checkout recovered
+Impact:
+401s were localized to checkout authentication.
+Cause:
+Middleware regression introduced in
+PR #2847
+Fix:
+Rollback prepared;
+@platform-oncall
+paged.
+Recovery:
+Authentication p95 returned to baseline at 10:11 AM.
+Confidence:
+High; no broad checkout outage detected.
+Next owner:
+@payments-infra
+to verify the permanent patch.
+Mara Chen
+10:16 AM
+Rollback is live. Checkout auth is green in every region. I’ll keep the incident open until
+PR #2851
+lands.
+1 reply
+Last reply just now
+CodeRabbit
+App
+just now
+Monitoring confirms the rollback restored checkout authentication. No new 401s in 12 minutes; incident status moved to
+Resolved
+Automation:
+Triggered checkout alert investigator
+Today at 10:14 AM
+Support
+CodeRabbit Agent triages support cases, gathers customer and codebase context, and drafts responses.
+Response
+CodeRabbit cross-references errors with merged PRs, codebase history, and past incidents to root out the underlying cause.
+Plan
+Reduce AI rework and improve ROI by helping teams define scope, assumptions, and success criteria before code is generated.
+Customer outcomes
+Raise the quality bar.
+Lower the review burden.
+suggestion acceptance
+70%
+30% time savings across 50 pull requests per day.
+Case study
+Writer
+reviewer hours saved
+100+
+In 30 days, with 65%+ acceptance on critical findings.
+Case study
+Abnormal
+faster pull request merges
+70%
+30% fewer review cycles per pull request.
+Case study
+Swiggy
+faster merge workflow
+40%
+70% acceptance of potential bugs flagged in review.
+Case study
+Clerk
+Get started with CodeRabbit
+Get a free trial
+English
+Product
+CodeRabbit Review
+CodeRabbit Triage
+CodeRabbit Explain
+CodeRabbit Secure
+CodeRabbit Engineer
+Explore
+Pricing
+Enterprise
+Customers
+Contact Sales
+Resources
+Blog
+Docs
+Changelog
+Case Studies
+Events & Webinars
+Reports & Guides
+Company
+About Us
+Careers
+Newsroom
+Brand Guidelines
+Press Kit
+Partnerships
+Startup Program
+Open Source
+Trust & support
+Trust Center
+Vulnerability Disclosure
+System Status
+Support
+FAQ
+Sign up for our newsletter
+Subscribe
+By
+signing up
+you agree to our
+Terms of Use
+and authorize CodeRabbit to provide occasional updates about products and solutions. You understand that you can opt out at any time and that your data will be handled in accordance with
+CodeRabbit Privacy Policy
+Legal
+Privacy Policy
+DPA
+CodeRabbit Inc. © 2026
