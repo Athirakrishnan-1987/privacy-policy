@@ -1,0 +1,16 @@
+# .coderabbit.yaml
+language: "en-US"
+
+reviews:
+  # Change profile from 'chill' to 'assertive' for strict reviews
+  profile: "assertive"
+  
+  # Enable Python linter (Ruff) to catch unused variables and bad practices
+  tools:
+    ruff:
+      enabled: true
+
+  # Add explicit review instructions
+  instructions: |
+    - Strictly flag any hardcoded passwords, tokens, API keys, or credentials as security vulnerabilities, even in test or utility scripts.
+    - Flag any unused variables, dead code, or variables that shadow Python built-in functions (such as `sum`).
