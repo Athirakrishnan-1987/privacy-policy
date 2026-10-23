@@ -10,7 +10,11 @@ reviews:
     ruff:
       enabled: true
 
-  # Add explicit review instructions
-  instructions: |
-    - Strictly flag any hardcoded passwords, tokens, API keys, or credentials as security vulnerabilities, even in test or utility scripts.
-    - Flag any unused variables, dead code, or variables that shadow Python built-in functions (such as `sum`).
+  # Path-specific review instructions
+  path_instructions:
+    - path: "**/*"
+      instructions: |
+        Strictly flag any hardcoded passwords, tokens, API keys, or credentials as security vulnerabilities, even in test or utility scripts.
+    - path: "**/*.py"
+      instructions: |
+        Flag any unused variables, dead code, or variables that shadow Python built-in functions (such as `sum`).
