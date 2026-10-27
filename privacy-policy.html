@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Privacy Policy - n8n_chat_test_app</title>
 <style>
 body {
@@ -18,24 +19,18 @@ h1, h2 {
 }
 </style>
 </head>
-
 <body>
-
 <h1>Privacy Policy</h1>
-
 <p><strong>Effective Date:</strong> 10 September 2026</p>
-
 <h2>1. Introduction</h2>
 <p>
 This Privacy Policy explains how <strong>n8n_chat_test_app</strong> collects,
 uses, stores, and protects information when users interact with our WhatsApp AI Assistant.
 </p>
-
 <p>
 Our service uses WhatsApp Business API, n8n workflow automation,
 and artificial intelligence technologies to provide automated responses and conversational experiences.
 </p>
-
 <h2>2. Information We Collect</h2>
 <p>
 We may collect information required to provide our service, including:
@@ -47,7 +42,6 @@ We may collect information required to provide our service, including:
 <li>Conversation metadata and timestamps</li>
 <li>Technical information required for service operation</li>
 </ul>
-
 <h2>3. How We Use Information</h2>
 <p>
 We use collected information to:
@@ -60,72 +54,135 @@ We use collected information to:
 <li>Troubleshoot technical issues</li>
 <li>Maintain security</li>
 </ul>
-
 <h2>4. Artificial Intelligence Processing</h2>
 <p>
 Messages may be processed by artificial intelligence systems to understand requests
 and generate responses. AI-generated responses may not always be accurate.
 </p>
-
 <h2>5. Third-Party Services</h2>
 <p>
 We use third-party services including Meta WhatsApp Business API,
 n8n automation platform, and AI service providers to deliver this service.
 We do not sell or rent user information.
 </p>
-
 <h2>6. Data Security</h2>
 <p>
 We take reasonable measures to protect user information from unauthorized access,
 misuse, loss, or disclosure.
 </p>
-
 <h2>7. Data Sharing</h2>
 <p>
 Information is shared only when necessary to provide the service,
 support technology providers, comply with legal obligations, or protect security.
 </p>
-
 <h2>8. User Rights</h2>
 <p>
 Users may request access, correction, or deletion of their information by contacting us.
 </p>
-
 <h2>9. WhatsApp Data Usage</h2>
 <p>
 Our WhatsApp integration only accesses information necessary to receive messages
 sent to our business account and provide automated responses.
 </p>
-
 <h2>10. Children's Privacy</h2>
 <p>
 This service is not intended for children under 13 years of age.
 </p>
-
 <h2>11. Data Retention</h2>
 <p>
 Information is retained only as long as necessary to provide the service,
 maintain security, and meet legal requirements.
 </p>
-
 <h2>12. Changes to This Privacy Policy</h2>
 <p>
 We may update this Privacy Policy from time to time.
 Updates will be posted on this page with a revised effective date.
 </p>
-
 <h2>13. Contact Us</h2>
 <p>
-<strong>App Name:</strong> n8n_chat_test_app<br>
+<strong>App Name:</strong> n8n_chat_test_app<br/>
 <strong>Email:</strong> aboobackercitrus@gmail.com
 </p>
-
 <h2>14. Data Deletion Request</h2>
 <p>
 Users can request deletion of their WhatsApp-related data by contacting:
-<br>
+<br/>
 <strong>aboobackercitrus@gmail.com</strong>
 </p>
 
+<script id="cr-header-dropdowns-controller">
+document.addEventListener('DOMContentLoaded', () => {
+  const prodBtn = document.querySelector('button[aria-controls="_R_6r8mivb_"]') || Array.from(document.querySelectorAll('button.site-header-nav-trigger')).find(b => b.textContent.includes('Product'));
+  const resBtn = document.querySelector('button[aria-controls="_R_ir8mivb_"]') || Array.from(document.querySelectorAll('button.site-header-nav-trigger')).find(b => b.textContent.includes('Resources'));
+
+  const prodMenu = document.getElementById('product-dropdown-menu');
+  const resMenu = document.getElementById('resources-dropdown-menu');
+
+  function closeAll() {
+    if (prodMenu) prodMenu.style.display = 'none';
+    if (resMenu) resMenu.style.display = 'none';
+    if (prodBtn) {
+      prodBtn.setAttribute('aria-expanded', 'false');
+      const arrow = prodBtn.querySelector('svg');
+      if (arrow) arrow.style.transform = 'none';
+    }
+    if (resBtn) {
+      resBtn.setAttribute('aria-expanded', 'false');
+      const arrow = resBtn.querySelector('svg');
+      if (arrow) arrow.style.transform = 'none';
+    }
+  }
+
+  if (prodBtn && prodMenu) {
+    prodBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = prodMenu.style.display === 'block';
+      closeAll();
+      if (!isOpen) {
+        prodMenu.style.display = 'block';
+        prodBtn.setAttribute('aria-expanded', 'true');
+        const arrow = prodBtn.querySelector('svg');
+        if (arrow) arrow.style.transform = 'rotate(180deg)';
+      }
+    });
+  }
+
+  if (resBtn && resMenu) {
+    resBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = resMenu.style.display === 'block';
+      closeAll();
+      if (!isOpen) {
+        resMenu.style.display = 'block';
+        resBtn.setAttribute('aria-expanded', 'true');
+        const arrow = resBtn.querySelector('svg');
+        if (arrow) arrow.style.transform = 'rotate(180deg)';
+      }
+    });
+  }
+
+  // Prevent clicks inside menus from bubbling to window
+  if (prodMenu) prodMenu.addEventListener('click', (e) => e.stopPropagation());
+  if (resMenu) resMenu.addEventListener('click', (e) => e.stopPropagation());
+
+  // Close when clicking outside or pressing Escape
+  document.addEventListener('click', closeAll);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAll();
+  });
+
+  // Hover styles for menu items
+  document.querySelectorAll('.cr-menu-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.style.backgroundColor = 'rgba(255, 255, 255, 0.06)';
+      item.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+    });
+    item.addEventListener('mouseleave', () => {
+      item.style.backgroundColor = 'rgba(255, 255, 255, 0.02)';
+      item.style.borderColor = 'rgba(255, 255, 255, 0.05)';
+    });
+  });
+});
+</script>
 </body>
 </html>
